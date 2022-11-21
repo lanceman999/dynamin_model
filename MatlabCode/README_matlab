@@ -1,0 +1,7 @@
+README
+
+the main code is:
+ode_pre_and_post(parm_vector, isoform)
+
+it takes in 2 inputs. The parm_vector has 8 values, examples are found in the Data folder.
+isoform is a string, either 'AA', 'AB, or 'BB.
