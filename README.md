@@ -11,5 +11,5 @@ This code performs the genetic algorithm that finds sets of optimal parameter se
 
 #Matlab folder
 Matlab code that also solves the ODE version of the model. Generates plots of the solutions.
-Experimental growth curve in expdataB_from4.dat
+Experimental growth curve in expdataBB_from4.dat
 
