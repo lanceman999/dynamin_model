@@ -4,4 +4,15 @@ the main code is:
 ode_pre_and_post(parm_vector, isoform)
 
 it takes in 2 inputs. The parm_vector has 8 values, examples are found in the Data folder.
+One solution for DynBB is:
+
+   0.0171228923000
+   4.8587871900000
+   10.0000000000000
+   30.0000000000000
+   0.0899529914000
+   0.0347089444000
+   206.7488610000000
+   0.0024059836000
+
 isoform is a string, either 'AA', 'AB, or 'BB.
