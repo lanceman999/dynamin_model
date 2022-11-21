@@ -1,0 +1,7 @@
+
+geometry here is set to match Dyn1bb isoform cluster densities, 
+pre-stimulation: DiffuseToCluster_BB_pre.vcml
+and 
+post-stimulation: DiffuseToCluster_BB_PostStim.vcml
+
+The other parameters are for an optimal solution found with D_sol=10uM
