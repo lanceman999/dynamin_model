@@ -143,18 +143,28 @@ relPost=plot_dynamin_fromODE(time, concPost, Vpost, Apost, AclusPost, 4);
 figure(6)
 plot(edat(:,1)+4,(edat(:,2)-del2)/(edat(1,2)-del2)*acPost(1),'c-','LineWidth',2);
 
-%PLOT BOTH SOLUTIONS (PRE AND POST) ON ONE AXIS
 f3=figure(7);
  ax3=axes('Parent',f3,'FontSize',20,'LineWidth',1);
 hold(ax3);
 xlabel('time (s)');
  ylabel('Dynamin Copies in Cluster');
-
-%Plot experimental curves, scaled to initial density and final relative increase
  plot(edat(:,1)+4,(edat(:,2)-del1)/(edat(1,2)-del1)*acPre(1),'-','Color',[0.5 0.5 0.5], 'LineWidth',3);
  plot(edat(:,1)+4,(edat(:,2)-del2)/(edat(1,2)-del2)*acPost(1),'k-','LineWidth',3);
 xlim([0 4])
 
-%Plot model solutions
 plot(relPre(:,1),relPre(:,2),'r-','LineWidth',3)
 plot(relPost(:,1),relPost(:,2),'m-','LineWidth',3)
+
+%HERE plot the experiment vs model, but normalized to initial density=1.
+f3=figure(8);
+ ax3=axes('Parent',f3,'FontSize',20,'LineWidth',1);
+hold(ax3);
+xlabel('time (s)');
+ ylabel('Dynamin Growth in Cluster');
+ plot(edat(:,1)+4,(edat(:,2)-del1)/(edat(1,2)-del1),'-','Color',[0.5 0.5 0.5], 'LineWidth',3);
+ plot(edat(:,1)+4,(edat(:,2)-del2)/(edat(1,2)-del2),'k-','LineWidth',3);
+xlim([0 4])
+
+plot(relPre(:,1),relPre(:,2)/relPre(1,2),'c-','LineWidth',3)
+plot(relPost(:,1),relPost(:,2)/relPost(1,2),'b-','LineWidth',3)
+
