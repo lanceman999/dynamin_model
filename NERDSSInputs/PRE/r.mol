@@ -1,0 +1,20 @@
+##
+# R_mem: a membrane recruiter uniformly 
+# distributed on the membrane
+##
+
+Name    = r
+isLipid = true
+
+# translational diffusion constants
+D = [0.0453, 0.0453, 0.0] # unit: um2/s
+
+# rotational diffusion constants
+Dr = [0, 0, 0.01] # unit: rad2/us
+
+# Coordinates
+COM    0.0000    0.0000    0.0000
+rd   0.0000    0.0000    0.5000
+
+bonds = 1
+com rd

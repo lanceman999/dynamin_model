@@ -1,0 +1,24 @@
+##
+# A_clus: an 'activating' recruiter 
+# that is localized to the membrane 
+# cluster region (is a circle region 
+# in the center of the membrane)
+##
+
+Name    = a
+isLipid = true
+isCenter = true
+centerRadius = 84 # unit: nm
+
+# translational diffusion constants
+D = [0.0, 0.0, 0.0] # unit: um2/s
+
+# rotational diffusion constants
+Dr = [0, 0, 0.01] # unit: rad2/us
+
+# Coordinates
+COM    0.0000    0.0000    0.0000
+ad   0.0000    0.0000    0.5000
+
+bonds = 1
+com ad
