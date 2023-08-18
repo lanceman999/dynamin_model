@@ -1,0 +1,150 @@
+# Input file
+
+start parameters
+    nItr = 30000000
+    timeStep = 1
+    timeWrite = 10000
+    pdbWrite = 100000
+    trajWrite = 10000000
+    restartWrite = 10000
+end parameters
+
+start reactions
+    #D + A_clus -> D_clus: k_mem
+    a(ad) + d(da)-> a(ad!1).d(da!1)
+    onRate3DMacro = 0.017 #uM-1s-1
+    sigma = 1.0 #nm
+    norm1 = [0,0,1]
+    norm2 = [0,0,1]
+    length3Dto2D = 10 #nm
+    assocAngles = [1.5707963, 2.356194, nan, pi, pi]
+
+    #D + D_2dclus -> 2D_2dclus: k_dyn
+    d(d1) + d(da!*,d1) -> d(d1!1).d(da!*,d1!1)
+    onRate3DMacro = 0.008675 #uM-1s-1
+    sigma = 1.0 #nm
+    norm1 = [0,0,1]
+    norm2 = [0,0,1]
+    length3Dto2D = 10 #nm
+    assocAngles = [M_PI,M_PI,nan,nan,0]
+
+    d(d2) + d(da!*,d2) -> d(d2!1).d(da!*,d2!1)
+    onRate3DMacro = 0.008675 #uM-1s-1
+    sigma = 1.0 #nm
+    norm1 = [0,0,1]
+    norm2 = [0,0,1]
+    length3Dto2D = 10 #nm
+    assocAngles = [M_PI,M_PI,nan,nan,0]
+
+    d(d3) + d(da!*,d3) -> d(d3!1).d(da!*,d3!1)
+    onRate3DMacro = 0.008675 #uM-1s-1
+    sigma = 1.0 #nm
+    norm1 = [0,0,1]
+    norm2 = [0,0,1]
+    length3Dto2D = 10 #nm
+    assocAngles = [M_PI,M_PI,nan,nan,0]
+
+    d(d4) + d(da!*,d4) -> d(d4!1).d(da!*,d4!1)
+    onRate3DMacro = 0.008675 #uM-1s-1
+    sigma = 1.0 #nm
+    norm1 = [0,0,1]
+    norm2 = [0,0,1]
+    length3Dto2D = 10 #nm
+    assocAngles = [M_PI,M_PI,nan,nan,0]
+
+    d(d1,d2!*) + d(d1) -> d(d1!1,d2!*).d(d1!1)
+    onRate3DMacro = 0.008675 #uM-1s-1
+    sigma = 1.0 #nm
+    norm1 = [0,0,1]
+    norm2 = [0,0,1]
+    length3Dto2D = 10 #nm
+    assocAngles = [M_PI,M_PI,nan,nan,0]
+
+    d(d1,d3!*) + d(d1) -> d(d1!1,d3!*).d(d1!1)
+    onRate3DMacro = 0.008675 #uM-1s-1
+    sigma = 1.0 #nm
+    norm1 = [0,0,1]
+    norm2 = [0,0,1]
+    length3Dto2D = 10 #nm
+    assocAngles = [M_PI,M_PI,nan,nan,0]
+
+    d(d1,d4!*) + d(d1) -> d(d1!1,d4!*).d(d1!1)
+    onRate3DMacro = 0.008675 #uM-1s-1
+    sigma = 1.0 #nm
+    norm1 = [0,0,1]
+    norm2 = [0,0,1]
+    length3Dto2D = 10 #nm
+    assocAngles = [M_PI,M_PI,nan,nan,0]
+
+    d(d1!*,d2) + d(d2) -> d(d1!*,d2!1).d(d2!1)
+    onRate3DMacro = 0.008675 #uM-1s-1
+    sigma = 1.0 #nm
+    norm1 = [0,0,1]
+    norm2 = [0,0,1]
+    length3Dto2D = 10 #nm
+    assocAngles = [M_PI,M_PI,nan,nan,0]
+
+    d(d3!*,d2) + d(d2) -> d(d3!*,d2!1).d(d2!1)
+    onRate3DMacro = 0.008675 #uM-1s-1
+    sigma = 1.0 #nm
+    norm1 = [0,0,1]
+    norm2 = [0,0,1]
+    length3Dto2D = 10 #nm
+    assocAngles = [M_PI,M_PI,nan,nan,0]
+
+    d(d4!*,d2) + d(d2) -> d(d4!*,d2!1).d(d2!1)
+    onRate3DMacro = 0.008675 #uM-1s-1
+    sigma = 1.0 #nm
+    norm1 = [0,0,1]
+    norm2 = [0,0,1]
+    length3Dto2D = 10 #nm
+    assocAngles = [M_PI,M_PI,nan,nan,0]
+
+    d(d1!*,d3) + d(d3) -> d(d1!*,d3!1).d(d3!1)
+    onRate3DMacro = 0.008675 #uM-1s-1
+    sigma = 1.0 #nm
+    norm1 = [0,0,1]
+    norm2 = [0,0,1]
+    length3Dto2D = 10 #nm
+    assocAngles = [M_PI,M_PI,nan,nan,0]
+
+    d(d2!*,d3) + d(d3) -> d(d2!*,d3!1).d(d3!1)
+    onRate3DMacro = 0.008675 #uM-1s-1
+    sigma = 1.0 #nm
+    norm1 = [0,0,1]
+    norm2 = [0,0,1]
+    length3Dto2D = 10 #nm
+    assocAngles = [M_PI,M_PI,nan,nan,0]
+
+    d(d4!*,d3) + d(d3) -> d(d4!*,d3!1).d(d3!1)
+    onRate3DMacro = 0.008675 #uM-1s-1
+    sigma = 1.0 #nm
+    norm1 = [0,0,1]
+    norm2 = [0,0,1]
+    length3Dto2D = 10 #nm
+    assocAngles = [M_PI,M_PI,nan,nan,0]
+
+    d(d1!*,d4) + d(d4) -> d(d1!*,d4!1).d(d4!1)
+    onRate3DMacro = 0.008675 #uM-1s-1
+    sigma = 1.0 #nm
+    norm1 = [0,0,1]
+    norm2 = [0,0,1]
+    length3Dto2D = 10 #nm
+    assocAngles = [M_PI,M_PI,nan,nan,0]
+
+    d(d2!*,d4) + d(d4) -> d(d2!*,d4!1).d(d4!1)
+    onRate3DMacro = 0.008675 #uM-1s-1
+    sigma = 1.0 #nm
+    norm1 = [0,0,1]
+    norm2 = [0,0,1]
+    length3Dto2D = 10 #nm
+    assocAngles = [M_PI,M_PI,nan,nan,0]
+
+    d(d3!*,d4) + d(d4) -> d(d3!*,d4!1).d(d4!1)
+    onRate3DMacro = 0.008675 #uM-1s-1
+    sigma = 1.0 #nm
+    norm1 = [0,0,1]
+    norm2 = [0,0,1]
+    length3Dto2D = 10 #nm
+    assocAngles = [M_PI,M_PI,nan,nan,0]
+end reactions
